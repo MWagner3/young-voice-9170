@@ -9,7 +9,6 @@ RSpec.describe 'professor index' do
     professors = [snape, hagarid, lupin]
 
     visit "/professors"
-    save_and_open_page
     professors.each do |professor|
       expect(page).to have_content(professor.name)
       expect(page).to have_content(professor.age)
